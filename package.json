@@ -1,0 +1,43 @@
+{
+  "name": "task-management-system",
+  "version": "1.0.0",
+  "description": "A fullstack task management application for software engineering diploma project",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "test": "jest",
+    "build": "cd client && npm run build",
+    "seed": "node server/scripts/seedTasks.js"
+  },
+  "keywords": [
+    "task-management",
+    "fullstack",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express"
+  ],
+  "author": "Software Engineering Student",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.8.9",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "jest": "^29.6.4",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  }
+}
